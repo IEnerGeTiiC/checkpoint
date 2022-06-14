@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+a {
+    color: black;
+    text-decoration: solid;
+}
+
+h2 {
+    margin: 0px;
+    align-items: flex-start;
+    width: 80%;
+}
+
+body,
+html {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto';
+    height: 100%;
+    margin: 0px;
+}
+
+body {
+    background-image: url(../img/tele.jpg);
+}
+
+/* Header */
+
+header {
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    background-color: black;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-family: 'Roboto';
+    margin-bottom: 12px;
+    width: 340px;
+    height: 140px;
+    border-radius: 90px;
+    border-left: solid 2px green;
+    border-right: solid 2px green;
+    
+
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+
+    animation: flutuacao 8s ease-in-out infinite;
+}
+
+@keyframes flutuacao {
+
+    0%,
+    100% {
+        transform: translateY(30px);
+    }
+
+    50% {
+        transform: translateY(-40px);
+    }
+}
+
+header nav a {
+    margin: 12px;
+    width: 197px;
+    height: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(0, 0, 0);
+    border-radius: 80px;
+    color: white;
+    border-left: solid 2px green;
+    border-right: solid 2px green;
+}
+
+/* banner */
+
+.banner {
+    width: 100%;
+    height: 426px;
+    background-image: url(../img/Copacabana.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    font-size: medium;
+}
+
+/* conteudo */
+
+.conteudo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.conteudo div p {
+    text-align: center;
+    justify-content: center;
+
+}
+
+.conteudo h2 {
+    margin-top: 28px;
+}
+
+.conteudo div {
+    background-color: lightgray;
+    border-radius: 36px;
+    width: 335px;
+    height: 534px;
+    margin: 18px;
+    background-image: url(../img/Copa);
+    
+}
+
+.conteudo div {
+    overflow: hidden;
+    max-width: 100%;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all  0.3s;
+    transition: all 0.3s;
+}
+
+.conteudo div:hover {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+
+/* Vídeo */
+
+.video {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+h2 {
+    width: 80%;
+    margin: 0px;
+}
+
+.video iframe {
+    border-radius: 36px;
+    width: 335px;
+    height: 534px;
+    margin: 18px;
+}
+
+/* FOOTER */
+
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+footer h2 {
+    width: fit-content;
+    align-self: center;
+    margin-top: 24px;
+}
+
+footer a {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 100px;
+    width: fit-content;
+    flex-direction: column;
+    color: white;
+
+}
+
+
+footer a img {
+
+    width: 141px;
+    height: 141px;
+    border-radius: 100%;
+}
+
+.rodape {
+    font-style: normal;
+    font-weight: 400px;
+    font-size: 64px;
+    margin-bottom: 55px;
+    margin-top: 33px;
+}
+
+/* DESKTOP */
+
+@media (min-width: 426px) {
+
+
+    header {
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+
+    header nav {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .conteudo h2 {
+        margin-top: 98px;
+    }
+
+    .video {
+        margin-top: 28px;
+        margin-bottom: 233px;
+    }
+
+    footer {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        height: 414px;
+    }
+
+    .rodape {
+        width: 100%;
+        margin-left: 76px;
+    }
+
+    footer a {
+        margin-left: 121.5px;
+        margin-right: 121.5px;
+    }
+
+    .video iframe {
+        width: 85%;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+@media (max-width: 500px) {
+    .banner {
+        display: none;
+    }
+}
